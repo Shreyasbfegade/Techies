@@ -1,0 +1,40 @@
+.Wel {
+    margin-left: 250px;
+}
+.size{
+    font-size: 20px !important;
+    color: black;
+}
+.navbar .nav-link {
+padding-bottom: 0;
+}
+.bg-dark {
+    background-color: #efefef !important;
+}
+
+.color{
+    color: #474764;
+}
+
+.container{
+    margin: 50px 0px auto 150px ;
+    width: 1050px;
+    max-width: 800px;
+}
+
+.opa{
+    opacity: 0.8;
+    color: black;
+}
+
+label{
+    font-weight: 450;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
