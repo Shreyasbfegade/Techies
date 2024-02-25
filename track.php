@@ -136,7 +136,7 @@ margin-left: 234px;
                                     //principal
                                     if ($_SESSION['usertype'] == 1): ?>
                               
-                                        <u>Path:</u><br>Staff
+                                        <u>Path:</u><br>HOD
                                         <br>&nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
@@ -150,12 +150,12 @@ margin-left: 234px;
                                         &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i> revert back
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
-                                        <?php if ($toUserObject->usertype == 4){
-                                        echo '<div class="disp">staff/student &nbsp; <input type="checkbox" checked> </div>';
+                                        <?php if ($toUserObject->usertype == 4 ||$toUserObject->usertype == 6|| $toUserObject->usertype == 7|| $toUserObject->usertype == 8){
+                                        echo '<div class="disp">Committee &nbsp; <input type="checkbox" checked> </div>';
                                         
                                         }
                                         else{
-                                            echo 'Staff/student';
+                                            echo 'Committee';
                                         }
                                         ?>
                                         <br>
@@ -165,7 +165,7 @@ margin-left: 234px;
                                     //staff
                                     if ($_SESSION['usertype'] == 2): ?>
                                         Path:
-                                        <br>Student
+                                        <br>Committee
                                         <br>&nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
@@ -174,6 +174,16 @@ margin-left: 234px;
                                         }
                                         else{
                                             echo 'You <br>';
+                                        }
+                                        ?>
+                                        &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
+                                        <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
+                                        <br>
+                                        <?php if ($toUserObject->usertype == 5){
+                                        echo '<div class="disp">Hod &nbsp; <input type="checkbox" checked> </div>';
+                                        }
+                                        else{
+                                            echo 'Hod <br>';
                                         }
                                         ?>
                                         &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
@@ -189,11 +199,12 @@ margin-left: 234px;
                                         &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i> revert back
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
+
                                         <?php if ($toUserObject->usertype == 4){
-                                        echo '<div class="disp">Student &nbsp; <input type="checkbox" checked> </div>';
+                                        echo '<div class="disp">Committee &nbsp; <input type="checkbox" checked> </div>';
                                         }
                                         else{
-                                            echo 'Student <br>';
+                                            echo 'Committee <br>';
                                         }
                                         ?>
                                         
@@ -210,9 +221,11 @@ margin-left: 234px;
                                     <br>anyone
                                     <br>
                                     <?php endif ?> 
+
+
                                     <?php
-                                    //student
-                                    if ($_SESSION['usertype'] == 4): ?>
+                                    //Committee student
+                                    if ($_SESSION['usertype'] == 4 || $_SESSION['usertype'] == 6 || $_SESSION['usertype'] == 7 || $_SESSION['usertype'] == 8 ): ?>
                                         Path:
                                         <br>You
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
@@ -224,8 +237,20 @@ margin-left: 234px;
                                             echo 'Staff <br>';
                                         }
                                         ?>
+
                                         &nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
+                                        
+                                        <?php if ($toUserObject->usertype == 5){
+                                        echo '<div class="disp">Hod &nbsp; <input type="checkbox" checked> </div>';
+                                        }
+                                        else{
+                                            echo 'Hod <br>';
+                                        }
+                                        ?>
+                                        &nbsp;<i class="fa-solid fa-arrow-down"></i>
+                                        <br>
+                                        
                                         <?php if ($toUserObject->usertype == 1){
                                         echo '<div class="disp">Principal &nbsp; <input type="checkbox" checked> </div>';
                                         }
@@ -236,7 +261,7 @@ margin-left: 234px;
                                         &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>   revert back
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
-                                        <?php if ($toUserObject->usertype == 4 and $fromUserObject->id != $toUserObject->id){
+                                        <?php if (($toUserObject->usertype == 4 ||$toUserObject->usertype == 6 ||$toUserObject->usertype == 7||$toUserObject->usertype == 8) and $fromUserObject->id != $toUserObject->id){
                                         echo '<div class="disp">You &nbsp; <input type="checkbox" checked> </div>';
                                         }
                                         else{
@@ -245,6 +270,47 @@ margin-left: 234px;
                                         ?>
                                        
                                         <?php endif ?>  
+
+                                        <?php
+                                    //hod
+                                    if ($_SESSION['usertype'] == 5): ?>
+                                        Path:
+                                        <br>Staff
+                                        <br>&nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
+                                        <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
+                                        <br>
+                                        <?php if ($toUserObject->usertype == 5 and $fromUserObject->id != $toUserObject->id){
+                                        echo '<div class="disp">You &nbsp; <input type="checkbox" checked> </div>';
+                                        }
+                                        else{
+                                            echo 'You <br>';
+                                        }
+                                        ?>
+                                        
+                                        &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
+                                        <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
+                                        <br>
+                                        <?php if ($toUserObject->usertype == 1){
+                                        echo '<div class="disp">Principal &nbsp; <input type="checkbox" checked> </div>';
+                                        }
+                                        else{
+                                            echo 'Principal <br>';
+                                        }
+                                        ?>
+                                        &nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i> revert back
+                                        <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
+                                        <br>
+
+                                        <?php if ($toUserObject->usertype == 4){
+                                        echo '<div class="disp">Committee &nbsp; <input type="checkbox" checked> </div>';
+                                        }
+                                        else{
+                                            echo 'Committee <br>';
+                                        }
+                                        ?>
+                                        
+                                   
+                                        <?php endif ?> 
                                         <br>
                                         
                                         <div class="note">
