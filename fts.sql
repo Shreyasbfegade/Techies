@@ -11,8 +11,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `fts_5`
 --
-CREATE DATABASE IF NOT EXISTS `f`;
-USE `f`;
+CREATE DATABASE IF NOT EXISTS `fts_5`;
+USE `fts_5`;
 
 -- --------------------------------------------------------
 
@@ -110,18 +110,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `usertype`) VALUES ('1', 'admin', 'admin@gmail.com','admin' ,'1', '3');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `usertype`) VALUES ('2', 'Principal', 'principal@gmail.com','1234' ,'0', '1');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `usertype`) VALUES ('3', 'Hod sir', 'hod@gmail.com','1234' ,'0', '5');
 
--- Create the 'users' table
--- CREATE TABLE IF NOT EXISTS `users` (
---   `id` int(11) NOT NULL AUTO_INCREMENT,
---   `name` varchar(200) NOT NULL,
---   `email` varchar(200) NOT NULL,
---   `password` varchar(200) NOT NULL,
---   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
---   `usertype` int(11), -- Add a foreign key reference to 'usertype'
---   PRIMARY KEY (`id`),
---   FOREIGN KEY (`usertype`) REFERENCES `usertype`(`id`) -- Define the foreign key relationship
--- );
 
 
 ALTER TABLE movements
