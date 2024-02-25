@@ -6,6 +6,7 @@ require "connection/connection.php";
 
 //Protecting Pages
 if (isset($_SESSION['user'])) {
+
     header("location: home.php");
 }
 
@@ -34,5 +35,9 @@ $_SESSION['user'] = $user_id;
 $typeid = $userData[5];
 $_SESSION['usertype'] = $typeid;
 
-header("location: home.php");
+if ($typeid == 4) {
+    header("location: Event.php");
+} else {
+    header("location: home.php");
+}
 ?>
