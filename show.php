@@ -104,7 +104,7 @@ if (!$userData[4]) {
                                         <tbody>
                                             <?php $count = 0; ?>
                                             <?php foreach ($usersData as $user) : ?>
-                                                <?php if ($user[1] !=='Principal' && $user[1] !=='Admin' && $user[1] !=='Hod sir'):?>
+                                                <?php if ($user[1] !=='Principal' && $user[1] !=='admin' && $user[1] !=='Hod sir'):?>
                                               <?php $count++; ?>
                                                 <tr>
                                                     
