@@ -6,14 +6,14 @@ if (!isset($_SESSION['user'])) {
     header("location: index.php");
 } else {
     $user_id = $_SESSION['user'];
-    $getQuery = "SELECT * FROM users where id = $user_id";
+    $getQuery = "SELECT * FROM `users` where `id` = $user_id";
     $result = mysqli_query($connection, $getQuery);
     $userData = mysqli_fetch_array($result);
 }
 if (!$userData[4]) {
     header("location: index.php");
 } else {
-    $getAllUsers = "SELECT * FROM users;";
+    $getAllUsers = "SELECT * FROM `users`;";
     $results = mysqli_query($connection, $getAllUsers);
     $usersData = mysqli_fetch_all($results);
     $welcome = 'User Section <span><i class="fa-solid fa-user"></i>';
@@ -97,19 +97,35 @@ if (!$userData[4]) {
                                                 <th style="background-color: #e9ecef;" scope="col">#</th>
                                                 <th style="background-color: #e9ecef;" scope="col">Name</th>
                                                 <th style="background-color: #e9ecef;" scope="col">Email</th>
+                                                <th style="background-color: #e9ecef;" scope="col">Committee/Type of User</th>
                                                 <th style="background-color: #e9ecef;" scope="col">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $count = 0; ?>
                                             <?php foreach ($usersData as $user) : ?>
-                                                <?php if ($user[1] !=='admin'):?>
+                                                <?php if ($user[1] !=='Principal' && $user[1] !=='Admin' && $user[1] !=='Hod sir'):?>
                                               <?php $count++; ?>
                                                 <tr>
                                                     
                                                     <th scope="row"><?php echo $count ?></th>
                                                     <td><?php echo  $user[1] ?></td>
                                                     <td><?php echo  $user[2] ?></td>
+                                                        <?php if ($user[5] ==2):?>
+                                                            <td><?php echo  'Teacher' ?></td>
+                                                        <?php endif?>
+                                                        <?php if ($user[5] ==4):?>
+                                                            <td><?php echo  'Student' ?></td>
+                                                        <?php endif?>
+                                                        <?php if ($user[5] ==6):?>
+                                                            <td><?php echo  'Cultural Committee' ?></td>
+                                                        <?php endif?>
+                                                        <?php if ($user[5] ==7):?>
+                                                            <td><?php echo  'Technical Committee' ?></td>
+                                                        <?php endif?>
+                                                        <?php if ($user[5] ==8):?>
+                                                            <td><?php echo  'Sports Committee' ?></td>
+                                                        <?php endif?>
                                                     <td> <form method="post" action="deleteuser.php"> 
                                                                     <input type="hidden" name="user_id" value="<?php echo $user[0]; ?>">
                                                                     <button class = "btn btn-danger" type="submit" name="remove_user">Remove user</button>
