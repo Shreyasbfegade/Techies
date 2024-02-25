@@ -104,17 +104,17 @@ if (!isset($_SESSION['user'])) {
                                 <form action="postaddfile.php" method="post" autocomplete="off" enctype="multipart/form-data">
 
                                     <div class="form-group">
-                                        <label for="file_id">File ID</label>
+                                        <label for="file_id">Roll No.</label>
                                         <input type="text" required="required" name="file_id" class="form-control opa" value="">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="file_name">File Name</label>
+                                        <label for="file_name">Event Name</label>
                                         <input type="text" name="file_name" required="required" class="form-control opa" value="">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="description">File Description (Optional)</label>
+                                        <label for="description">Event Description (Optional)</label>
                                         <textarea name="description" class="form-control opa" rows="1"></textarea>
                                     </div>
 
