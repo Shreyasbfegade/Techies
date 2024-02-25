@@ -167,6 +167,7 @@ CREATE TABLE Booked (
     time_slot Varchar(256)
     
 );
+ALTER TABLE `booked` CHANGE `index_column` `index_column` INT NOT NULL AUTO_INCREMENT;
 
 
 
