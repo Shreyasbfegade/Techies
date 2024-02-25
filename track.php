@@ -231,10 +231,10 @@ margin-left: 234px;
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
                                         <?php if ($toUserObject->usertype == 2){
-                                        echo '<div class="disp">Staff &nbsp; <input type="checkbox" checked> </div>';
+                                        echo '<div class="disp">Teacher &nbsp; <input type="checkbox" checked> </div>';
                                         }
                                         else{
-                                            echo 'Staff <br>';
+                                            echo 'Teacher <br>';
                                         }
                                         ?>
 
@@ -275,7 +275,7 @@ margin-left: 234px;
                                     //hod
                                     if ($_SESSION['usertype'] == 5): ?>
                                         Path:
-                                        <br>Staff
+                                        <br>Teacher
                                         <br>&nbsp;<i class="fa-solid fa-minus fa-rotate-90"></i>
                                         <br>&nbsp;<i class="fa-solid fa-arrow-down"></i>
                                         <br>
