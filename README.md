@@ -25,7 +25,7 @@ To start a website using XAMPP, you'll typically follow these steps:
 •	Open a web browser.
 •	Enter http://localhost/ in the address bar.
 •	Enter Fts.sql file in phpmyadmin to create Database.
-•	If your website files are stored directly in the htdocs directory, you can access your website by entering http://localhost/Techie-mainwhere "your-website-folder" is the name of the folder containing your website files.
+•	If your website files are stored directly in the htdocs directory, you can access your website by entering http://localhost/Techie-main (Techie-main) is the name of the folder containing your website files.
 4.	Verify Your Website:
 •	Your website should now be accessible in the web browser. You can navigate through your website to ensure it's working as expected.
 That's it! Your website should now be up and running locally using XAMPP. You can continue developing and testing your website on your local server before deploying it to a live server.
