@@ -135,7 +135,7 @@ tr:nth-child(even) {
 .logout-btn {
             position: fixed;
             top: 20px;
-            right: 20px;
+            right: 30px;
             z-index: 999; /* Ensure the button appears on top of other elements */
             background-color: #dc3545; /* Bootstrap danger color */
             color: #fff; /* Text color */
