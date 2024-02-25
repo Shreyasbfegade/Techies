@@ -89,7 +89,9 @@ INSERT INTO usertype(id, usertype) VALUES ('2','Staff');
 INSERT INTO usertype(id, usertype) VALUES ('3','Admin');
 INSERT INTO usertype(id, usertype) VALUES ('4','Student');
 
-INSERT INTO users (id, name, email, password, is_admin, usertype) VALUES (, 'admin', 'admin@gmail.com','admin' ,'1', '3');
+INSERT INTO users (id, name, email, password, is_admin, usertype) VALUES (, 'Admin', 'admin@gmail.com','admin' ,'1', '3');
+INSERT INTO users (id, name, email, password, is_admin, usertype) VALUES (, 'Principal', 'pricipal@gmail.com','admin' ,'0', '1');
+INSERT INTO users (id, name, email, password, is_admin, usertype) VALUES (, 'Hod sir', 'hod@gmail.com','admin' ,'0', '5');
 
 CREATE TABLE Venue (
     venueCode int PRIMARY KEY,
