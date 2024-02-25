@@ -13,6 +13,7 @@
         <a class="nav-link size " href="#" style="margin-left: 50px;"><?php echo $welcome; ?></a>
 
         </li>
+        <?php if (!($userData[4])): ?>
         <li class="nav-item">
           <div class="dropdown pb-4 pt-2 ">
               <a href="#" class="d-flex align-items-center text-Black text-decoration-none dropdown-toggle size Wel"
@@ -28,6 +29,7 @@
               </ul>
           </div>
       </li>
+      <?php endif ?>
       <?php if ($userData[4]): ?>
       <li class="nav-item">
           <div class="dropdown pb-4 pt-2 ">
