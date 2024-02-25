@@ -137,9 +137,9 @@ $welcome = 'Welcome to Student View Section <span><i class="far fa-file"></i></s
                                 <td style="width: 175px;" ><?php echo date("d.m.Y h.i A", strtotime($fileObject->created_at)) ?></td>
                                 <td><?php echo $createdUserObject->name ?></td>
                                 <td>
-                                <a  href="/fts_6/track.php?file_id=<?php echo $fileObject->id; ?>"><button class="btn btn-sm btn-primary">Track path</button></a> 
+                                <a  href="/Techies-main/track.php?file_id=<?php echo $fileObject->id; ?>"><button class="btn btn-sm btn-primary">Track path</button></a> 
                                 <?php if (isDispatchable($connection, $fileObject->id)): ?>
-                                <a  href="/fts_6/dispatch.php?file_id=<?php echo $fileObject->id; ?>"><button class="btn btn-sm btn-primary">Dispatch</button></a> 
+                                <a  href="/Techies-main/dispatch.php?file_id=<?php echo $fileObject->id; ?>"><button class="btn btn-sm btn-primary">Dispatch</button></a> 
                                 <?php endif ?>
                                 <?php if ($createdUserObject->id == $_SESSION['user']): ?>
                                 <a  href="deletefile.php?file_id=<?php echo $fileObject->id; ?>" ><button class="btn btn-sm btn-danger">Delete</button></a> 
