@@ -101,7 +101,7 @@ if (!isset($_SESSION['user'])) {
                                 <h5>Please Fill the Application Form Below </h5>
                             </div>
                             <div style="padding: 10px;">
-                                <form action="#" method="post" autocomplete="off" enctype="multipart/form-data">
+                                <form action="postaddfile.php" method="post" autocomplete="off" enctype="multipart/form-data">
 
                                     <div class="form-group">
                                         <label for="file_id">File ID</label>
