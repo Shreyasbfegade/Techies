@@ -61,7 +61,7 @@ if ($venue=='turf') {
   if ($venue=='CollegeGround') {
     $venue = 2;
   }
-$new = "INSERT INTO `Request` (`date`, `venue_id`, `time_slot`) VALUES ('%s', '%s', '%s');";
+$new = "INSERT INTO `Booked` (`date`, `venue_id`, `time_slot`) VALUES ('%s', '%s', '%s');";
 $newQuery = sprintf($new, $date, $venue, $freeslot);
 $result = mysqli_query($connection, $newQuery);
 
